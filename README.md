@@ -83,7 +83,7 @@ spec = do
 
 ```
 
-Then to verify that all tests pass run:
+Then to verify that the DFA accepts the specified language, run:
 
 ```
 stack test
