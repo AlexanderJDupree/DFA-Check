@@ -19,7 +19,11 @@ stack build
 
 ## Usage
 
-For simplicity, I have been using [hspec](https://hspec.github.io/) to verify DFA's as unit tests. To do this, simply create a file for the DFA you want to test and use the DFA-check library to create the machine. For example, if I wanted to create a DFA that accepts only binary strings that ends in '1' I would do this I would do this. 
+For simplicity, I have been using [hspec](https://hspec.github.io/) to verify DFA's as unit tests. To do this, simply create a file for the DFA you want to test and use the DFA-check library to create the machine. For example, lets make and test a DFA that only accepts binary strings that end in '1', as represented in this diagram:
+
+![Odd Binary String DFA](example.png)
+
+To do this we need to create the test file first:
 
 ```bash
 touch test/OddBinaryStringSpec.hs
