@@ -13,6 +13,8 @@ module DFA
     , eval
     ) where
 
+-- TODO Create function that returns the path taken through the DFA as well
+
 import Data.Set ( Set )
 import qualified Data.Set as Set
 
@@ -24,6 +26,7 @@ data DFA state symbol = Ord state => DFA { states   :: Set state
                                          }
 
 eval :: Ord state => DFA state symbol -> [symbol] -> Bool
+eval dfa []   = isAccept dfa (start dfa)
 eval dfa word = isAccept dfa $ foldl (delta dfa) (start dfa) word 
 
 isAccept :: Ord state => DFA state symbol -> state -> Bool
