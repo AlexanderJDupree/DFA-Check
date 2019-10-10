@@ -37,7 +37,7 @@ Then open the 'OddBinaryStringSpec.hs' file in your favorite text editor and add
 
 {-# LANGUAGE OverloadedLists #-}
 
-module M1Spec where
+module OddBinaryStringSpec where
 
 import DFA
 import Test.Hspec
